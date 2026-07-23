@@ -5,6 +5,6 @@ describe('Página de cadastro', () => {
     cy.get('[data-test="register-button"]').click();
   });
   it('Deve preencher os campos do formulário incorretamente e exibir mensagens ao usuário', () => {
-    cy.cadastrar-incorreto('', '', '')
+    cy.cadastrarIncorreto(' ', ' ', ' ')
   })
 })

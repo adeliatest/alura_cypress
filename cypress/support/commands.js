@@ -20,7 +20,7 @@ Cypress.Commands.add('cadastrar', (nome, email, senha) => {
     cy.get('[data-test="submit-button"]').click();
 })
 
-Cypress.Commands.add('cadastrar-incorreto', (nome, email, senha) => {
+Cypress.Commands.add('cadastrarIncorreto', (nome, email, senha) => {
     // Selecionar campo nome
     cy.get('[data-test="input-name"]').type(nome);
     // Selecionar campo email
@@ -33,8 +33,7 @@ Cypress.Commands.add('cadastrar-incorreto', (nome, email, senha) => {
     cy.get('[data-test="submit-button"]').click();
     // Validar mensagens de erro
     cy.contains('É necessário informar um endereço de email').should('be.visible')
-    cy.contains('Crie uma senha').should('be.visible')
-    cy.contains('Repita a senha criada acima').should('be.visible')
+    cy.contains('A senha deve conter').should('be.visible')
 })
 
 // ***********************************************
